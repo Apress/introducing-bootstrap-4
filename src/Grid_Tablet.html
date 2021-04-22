@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="../node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <style>
+      .sample {
+        font-size: 150%;
+        border: 1px dotted silver;
+        padding: 15px;
+      }
+
+      [class^='col'] {
+        border: 1px solid blue;
+      }
+
+      body {
+        margin: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container sample">
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-8">
+          Small: 12 Tablet: 6 Large: 8
+        </div>
+        <div class="col-6 col-md-4">
+          Small: 6 Large: 4
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6 col-md-4">A Small: 6 Tablet: 4</div>
+        <div class="col-6 col-md-4">B Small: 6 Tablet: 4</div>
+        <div class="col-6 d-md-none">
+          C Small: 6 Tablet: invisible
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

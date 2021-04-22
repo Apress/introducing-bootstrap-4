@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="../node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <style>
+      .sample {
+        border: 1px dotted silver;
+        padding: 15px;
+      }
+
+      body {
+        margin: 50px;
+      }
+
+      .progress-bar > span {
+        color: black;
+        position: relative;
+        top: -30px;
+        display: block;
+        font-size: 80%;
+        content: attr(value);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sample">
+      <div class="progress">
+        <div class="progress-bar" style="width: 60%" id="val1">60%</div>
+      </div>
+    </div>
+  </body>
+</html>

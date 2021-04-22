@@ -1,111 +1,51 @@
-# Bootstrap Ruby Gem [![Build Status](https://travis-ci.org/twbs/bootstrap-rubygem.svg?branch=master)](https://travis-ci.org/twbs/bootstrap-rubygem) [![Gem](https://img.shields.io/gem/v/bootstrap.svg)](https://rubygems.org/gems/bootstrap)
+# Bootstrap 4.5
 
-[Bootstrap 4][bootstrap-home] ruby gem for Ruby on Rails (Sprockets) and Hanami (formerly Lotus).
+This is the repository for the book available from Apress (English Edition, Bootstrap 4.5).
 
-For Sass versions of Bootstrap 3 and 2 see [bootstrap-sass](https://github.com/twbs/bootstrap-sass) instead.
+## English Edition
 
-## Installation
+### First Edition (2016)
 
-Please see the appropriate guide for your environment of choice:
+The book has been published by **Apress** and is available as printed copy and electronically:
 
-* [Ruby on Rails 4+](#a-ruby-on-rails) or other Sprockets environment.
-* [Other Ruby frameworks](#b-other-ruby-frameworks) not on Rails.
+* [https://www.apress.com/us/book/9781484223819](https://www.apress.com/us/book/9781484223819)
+  * Electronic: ISBN 978-1-4842-2382-6
+  * Paper (b/w): ISBN 978-1-4842-2381-9
 
+### Second Edition (2020)
 
-### a. Ruby on Rails
+The book has been published by **Apress** and is available as printed copy and electronically:
 
-Add `bootstrap` to your Gemfile:
+* [https://www.apress.com/gp/book/9781484262023](https://www.apress.com/gp/book/9781484262023)
+  * Electronic: ISBN 978-1-4842-6203-0
+  * Paper (b/w): ISBN 978-1-4842-6202-3
 
-```ruby
-gem 'bootstrap', '~> 5.0.0.alpha1'
-```
+## How to Use?
 
-Ensure that `sprockets-rails` is at least v2.3.2.
+1. Install NodeJs
+2. Install a Git client
+3. Open a console / terminal
+4. Type the following command: `git clone https://github.com/joergkrause/bootstrap4-book`
+5. Open the new folder *bootstrap4-book* in your favorite editor
 
-`bundle install` and restart your server to make the files available through the pipeline.
+## Other (elder) Editions
 
-Import Bootstrap styles in `app/assets/stylesheets/application.scss`:
+Elder editions of this book are available for Bootstrap 3 (3.3.7). Also, a German version is available (4.0 Beta).
 
-```scss
-// Custom bootstrap variables must be set or imported *before* bootstrap.
-@import "bootstrap";
-```
+### Deutsche Ausgabe
 
-The available variables can be found [here](assets/stylesheets/bootstrap/_variables.scss).
+Das Repository für das Buch bei Leanpub oder Amazon (Deutsche Ausgabe).
 
-Make sure the file has `.scss` extension (or `.sass` for Sass syntax). If you have just generated a new Rails app,
-it may come with a `.css` file instead. If this file exists, it will be served instead of Sass, so rename it:
+Das Buch erschien bei *texxtoor* und ist bei **LeanPub** and **Amazon** erhältlich:
 
-```console
-$ mv app/assets/stylesheets/application.css app/assets/stylesheets/application.scss
-```
+* PDF, EPUB, and MOBI [https://leanpub.com/bootstrap4-intro](https://leanpub.com/bootstrap4-intro) -- provided by LeanPub
+* For your Kindle [https://www.amazon.de/dp/B01A5YYQIM](https://www.amazon.de/dp/B01A5YYQIM) -- provided by Amazon KDP
+* As paper copy -- _full color edition_ --  [https://www.amazon.de/dp/1522950001](https://www.amazon.de/dp/1522950001) -- provided by Amazon CreateSpace
 
-Then, remove all the `*= require` and `*= require_tree` statements from the Sass file. Instead, use `@import` to import Sass files.
+### Wie verwenden?
 
-Do not use `*= require` in Sass or your other stylesheets will not be able to access the Bootstrap mixins and variables.
-
-Bootstrap JavaScript depends on jQuery.
-If you're using Rails 5.1+, add the `jquery-rails` gem to your Gemfile:
-
-```ruby
-gem 'jquery-rails'
-```
-
-Bootstrap tooltips and popovers depend on [popper.js] for positioning.
-The `bootstrap` gem already depends on the
-[popper_js](https://github.com/glebm/popper_js-rubygem) gem.
-
-Add Bootstrap dependencies and Bootstrap to your `application.js`:
-
-```js
-//= require jquery3
-//= require popper
-//= require bootstrap-sprockets
-```
-
-While `bootstrap-sprockets` provides individual Bootstrap components
-for ease of debugging, you may alternatively require
-the concatenated `bootstrap` for faster compilation:
-
-```js
-//= require jquery3
-//= require popper
-//= require bootstrap
-```
-
-### b. Other Ruby frameworks
-
-If your framework uses Sprockets or Hanami,
-the assets will be registered with Sprockets when the gem is required,
-and you can use them as per the Rails section of the guide.
-
-Otherwise you may need to register the assets manually.
-Refer to your framework's documentation on the subject.
-
-## Configuration
-
-### Sass: Autoprefixer
-
-Bootstrap requires the use of [Autoprefixer][autoprefixer].
-[Autoprefixer][autoprefixer] adds vendor prefixes to CSS rules using values from [Can I Use](http://caniuse.com/).
-
-If you are using bootstrap with Rails, autoprefixer is set up for you automatically.
-Otherwise, please consult the [Autoprefixer documentation][autoprefixer].
-
-### Sass: Individual components
-
-By default all of Bootstrap is imported.
-
-You can also import components explicitly. To start with a full list of modules copy
-[`_bootstrap.scss`](assets/stylesheets/_bootstrap.scss) file into your assets as `_bootstrap-custom.scss`.
-Then comment out components you do not want from `_bootstrap-custom`.
-In the application Sass file, replace `@import 'bootstrap'` with:
-
-```scss
-@import 'bootstrap-custom';
-```
-
-[bootstrap-home]: https://getbootstrap.com
-[bootstrap-variables.scss]: https://github.com/twbs/bootstrap-rubygem/blob/master/templates/project/_bootstrap-variables.scss
-[autoprefixer]: https://github.com/ai/autoprefixer
-[popper.js]: https://popper.js.org
+1. Installiere NodeJs
+2. Installiere einen Git-Client
+3. Öffne eine Konsole / Terminal
+4. Gebe dieses Kommando ein: `git clone https://github.com/joergkrause/bootstrap4-book`
+5. Öffne den Ordner *bootstrap4-book* in deinem Liebling-Editor
